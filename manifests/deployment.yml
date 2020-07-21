@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "dev-5ae2"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "dev-5ae2"
+    spec:
+      containers:
+        - name: "dev-5ae2"
+          image: "edidocker.azurecr.io/dev"
+          ports:
+          - containerPort: 80
